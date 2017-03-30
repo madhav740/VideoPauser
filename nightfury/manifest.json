@@ -1,0 +1,30 @@
+{
+"manifest_version": 2,
+
+  "name": "VideoPauser",
+  "description": "This extension will pause a youtube video after t time",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "pause.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ],
+"content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ],
+	  "css":[
+		"sample.css"
+	]
+    }
+  ]
+
+}
+
